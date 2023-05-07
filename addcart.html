@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>LOVE A LOAF</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="addcart.css">
+    </head>
+
+    <body>
+        <div class="AddcartPage">
+            <header>  
+                <div class="container" >
+                    <div class="outer">
+                        <div class="navbar">
+                            <div class="logo">
+                                <a href="home.html">
+                                <img src="image/logo.png" alt="mobile logo">
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <ion-icon name="bag-handle-outline"></ion-icon>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        
+        <div id="menuSelect">
+            <div class="leftTable">
+            <table>
+                <thead>
+                    <div class="thead">
+                        <h3>SOFT BUN</h3>
+                    </div>
+                </thead>
+                <tr>
+                    <td class="menuProducts">
+                        <img src="image/softbun1.png" alt="softbun1"><i>ALMOND CHOCO<br> RM3.00</i>
+                    </td>
+                    <td style="padding:0; padding-left: 15px; width:25%;">
+                        <button onclick="selectItem('almondChoco')"><ion-icon name="add-outline"></ion-icon></button>
+                        <button id="remove_AlmondChoco" onclick="removeItem('almondChoco')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td class="menuProducts">
+                        <img src="image/softbun2.png" alt="softbun2"><i>BLACK SUGAR PULLED MOCHI<br> RM4.50 
+                    </td>
+                    <td style="padding:0; padding-left: 15px; width:25%;">
+                        <button onclick="selectItem('blackMochi')"><ion-icon name="add-outline"></ion-icon></button>
+                        <button id="remove_BlackMochi" onclick="removeItem('blackMochi')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menuProducts">
+                        <img src="image/softbun3.png" alt="softbun3"><i>CHEESY EGGLETTE CUBE <br> RM4.60        
+                    </td>
+                    <td style="padding:0; padding-left: 15px; width:25%;">
+                        <button onclick="selectItem('eggletteCube')"><ion-icon name="add-outline"></ion-icon></button>
+                        <button id="remove_EggletteCube" onclick="removeItem('eggletteCube')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menuProducts">
+                        <img src="image/softbun4.png" alt="softbun4"><i>GARLIC SAUSAGE </><br> RM3.40        
+                    </td>
+                    <td style="padding:0; padding-left: 15px; width:25%;">
+                        <button onclick="selectItem('garlicSausage')"><ion-icon name="add-outline"></ion-icon></button>
+                        <button id="remove_GarlicSausage" onclick="removeItem('garlicSausage')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+
+            <div class="rightTable">
+                <table>
+                    <thead>
+                        <div class="thead">
+                            <h3>DANISH CROISSANT</h3>
+                        </div>
+                    </thead>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/croissant1.png" alt="croissant1"><i>BUTTERY ALMOND DANISH
+                            <br> RM3.70
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('almondDanish')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_AlmondDanish" onclick="removeItem('almondDanish')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/croissant2.png" alt="croissant2"><i>CHOCOLAVA CROISSANT <br> RM6.70
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('chocolava')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_Chocolava" onclick="removeItem('chocolava')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/croissant3.png" alt="croissant3"><i>FRUITY DANISH
+                            <br> RM4.80        
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('fruityDanish')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_FruityDanish" onclick="removeItem('fruityDanish')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/croissant4.png" alt="croissant4"><i>FRENCH CROISSANT
+                            <br> RM3.40
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('frenchCroissant')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_FrenchCroissant" onclick="removeItem('frenchCroissant')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="leftTable">
+                <table>
+                    <thead>
+                        <div class="thead">
+                            <h3>SOFT EURO</h3>
+                        </div>
+                    </thead>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/euro1.png" alt="euro1"><i>ALMOND ROLL RAISIN WALNUT <br> RM5.80
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('almondRoll')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_AlmondRoll" onclick="removeItem('almondRoll')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/euro2.png" alt="euro2"><i>DARK SEED GRAIN BREAD <br> RM6.00
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('grainBread')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_GrainBread" onclick="removeItem('grainBread')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/euro3.png" alt="euro3"><i>FROMAGE <br> RM6.10        
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('fromage')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_Fromage" onclick="removeItem('fromage')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="menuProducts">
+                            <img src="image/euro4.png" alt="euro4"><i>OREO SOFT MILK CHOCOLATE <br> RM4.90        
+                        </td>
+                        <td style="padding:0; padding-left: 15px; width:25%;">
+                            <button onclick="selectItem('oreomilkChoco')"><ion-icon name="add-outline"></ion-icon></button>
+                            <button id="remove_OreoMilkChoco" onclick="removeItem('oreomilkChoco')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="rightTable">
+                    <table>
+                        <thead>
+                            <div class="thead">
+                                <h3>SEASONAL EURO</h3>
+                            </div>
+                        </thead>
+                        <tr>
+                            <td class="menuProducts">
+                                <img src="image/seasonal1.png" alt="seasonal1"><i>CHERRY FANTASY SOFT EURO <br> RM7.90 </i>
+                            </td>
+                            <td style="padding:0; padding-left: 15px; width:25%;">
+                                <button onclick="selectItem('cherryEuro')"><ion-icon name="add-outline"></ion-icon></button>
+                                <button id="remove_CherryEuro" onclick="removeItem('cherryEuro')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td class="menuProducts">
+                                <img src="image/seasonal2.png" alt="seasonal2"><i>CHILL MINCED CHICKEN SOFT EURO <br> RM7.90 </i>
+                            </td>
+                            <td style="padding:0; padding-left: 15px; width:25%;">
+                                <button onclick="selectItem('chiliChickenEuro')"><ion-icon name="add-outline"></ion-icon></button>
+                                <button id="remove_ChiliChickenEuro" onclick="removeItem('chiliChickenEuro')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menuProducts">
+                                <img src="image/seasonal3.png" alt="seasonal3"><i>GREEN GRAPE SOFT EURO <br> RM8.90 </i>
+                            </td>
+                            <td style="padding:0; padding-left: 15px; width:25%;">
+                                <button onclick="selectItem('grapeEuro')"><ion-icon name="add-outline"></ion-icon></button>
+                                <button id="remove_GrapeEuro" onclick="removeItem('grapeEuro')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="menuProducts">
+                                <img src="image/seasonal4.png" alt="seasonal4"><i>SICHUAN CHILI CRAB SOFT EURO <br> RM8.90 </i>        
+                            </td>
+                            <td style="padding:0; padding-left: 15px; width:25%;">
+                                <button onclick="selectItem('sichuanEuro')"><ion-icon name="add-outline"></ion-icon></button>
+                                <button id="remove_SichuanEuro" onclick="removeItem('sichuanEuro')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+
+            <div class="leftTable">
+                        <table>
+                            <thead>
+                                <div class="thead">
+                                    <h3>FRENCH</h3>
+                                </div>
+                            </thead>
+                            <tr>
+                                <td class="menuProducts">
+                                    <img src="image/french1.png" alt="french1"><i>CRANBERRY WALNUT STICK <br> RM4.40 </i>
+                                </td>
+                                <td style="padding:0; padding-left: 15px; width:25%;">
+                                    <button onclick="selectItem('cranberryStick')"><ion-icon name="add-outline"></ion-icon></button>
+                                    <button id="remove_CranberryStick" onclick="removeItem('cranberryStick')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                </td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td class="menuProducts">
+                                    <img src="image/french2.png" alt="french2"><i>FRENCH BAGUETTE <br> RM4.10 </i>
+                                </td>
+                                <td style="padding:0; padding-left: 15px; width:25%;">
+                                    <button onclick="selectItem('frenchBaguette')"><ion-icon name="add-outline"></ion-icon></button>
+                                    <button id="remove_FrenchBaguette" onclick="removeItem('frenchBaguette')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="menuProducts">
+                                    <img src="image/french3.png" alt="french3"><i>FRENCH BRULEE <br> RM3.70 </i>
+                                </td>
+                                <td style="padding:0; padding-left: 15px; width:25%;">
+                                    <button onclick="selectItem('frenchBrulee')"><ion-icon name="add-outline"></ion-icon></button>
+                                    <button id="remove_FrenchBrulee" onclick="removeItem('frenchBrulee')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="menuProducts">
+                                    <img src="image/french4.png" alt="french4"><i>FRENCH GARLIC <br> RM3.80 </i>
+                                </td>
+                                <td style="padding:0; padding-left: 15px; width:25%;">
+                                    <button onclick="selectItem('frenchGarlic')"><ion-icon name="add-outline"></ion-icon></button>
+                                    <button id="remove_FrenchGarlic" onclick="removeItem('frenchGarlic')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                </td>
+                            </tr>
+                        </table>
+            </div>
+
+            <div class="rightTable">
+                            <table>
+                                <thead>
+                                    <div class="thead">
+                                        <h3>TOAST SERIES</h3>
+                                    </div>
+                                </thead>
+                                <tr>
+                                    <td class="menuProducts">
+                                        <img src="image/toast1.png" alt="toast1"><i>CHOCOLATE TOAST <br> RM4.90 </i>
+                                    </td>
+                                    <td style="padding:0; padding-left: 15px; width:25%;">
+                                        <button onclick="selectItem('chocoToast')"><ion-icon name="add-outline"></ion-icon></button>
+                                        <button id="remove_ChocoToast" onclick="removeItem('chocoToast')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                    </td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td class="menuProducts">
+                                        <img src="image/toast2.png" alt="toast2"><i>DARK SEED GRAIN TOAST <br> RM5.00 </i>
+                                    </td>
+                                    <td style="padding:0; padding-left: 15px; width:25%;">
+                                        <button onclick="selectItem('grainToast')"><ion-icon name="add-outline"></ion-icon></button>
+                                        <button id="remove_GrainToast" onclick="removeItem('grainToast')"disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="menuProducts">
+                                        <img src="image/toast3.png" alt="toast3"><i>GOLDEN CHEESE TOAST <br> RM5.20 </i>
+                                    </td>
+                                    <td style="padding:0; padding-left: 15px; width:25%;">
+                                        <button onclick="selectItem('cheeseToast')"><ion-icon name="add-outline"></ion-icon></button>
+                                        <button id="remove_CheeseToast" onclick="removeItem('cheeseToast')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="menuProducts">
+                                        <img src="image/toast4.png" alt="toast4"><i>RAISIN TOAST <br> RM4.40 </i>       
+                                    </td>
+                                    <td style="padding:0; padding-left: 15px; width:25%;">
+                                        <button onclick="selectItem('raisinToast')"><ion-icon name="add-outline"></ion-icon></button>
+                                        <button id="remove_RaisinToast" onclick="removeItem('raisinToast')" disabled><ion-icon name="remove-outline"></ion-icon></button>
+                                    </td>
+                                </tr>
+                            </table>
+            </div>                
+        </div>
+
+        <div id="cart">
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th colspan="4">
+                            Cart!!
+                        </th>
+                    </tr>
+                    <tr id="detailsRow">
+                        <td id="productClass">
+                            Items
+                        </td>
+                        <td id="productUnitPrice">
+                            Unit Price <br>
+                            (RM)
+                        </td>
+                        <td id="productNum">
+                            No. of Items
+                        </td>
+                        <td id="productPrice">
+                            Price <br>
+                            (RM)
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="purchaseList">
+                    <!-- Item is stored here -->
+                </tbody>
+                <tfoot id="totalPrice">
+                    <td colspan="3"> 
+                        <i>Total</i>
+                    </td>
+                    <td style='text-align:center'>
+                        <b>RM 0.00</b>
+                    </td>
+                    <!-- Total price is stored here -->
+                </tfoot>
+            </table>
+        </div>
+
+
+    <script src="addcart.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    <footer>
+        <div class="mainFooter">
+            <div class="left box">
+                <h5>Opening Hours</h5>
+                <div class="content">
+                    <h6>Monday<span>9:00 - 22:00</span></h6>
+                    <h6>Tuesday<span>9:00 - 22:00</span></h6>
+                    <h6>Wednesday<span>9:00 - 22:00</span></h6>
+                    <h6>Thursday<span>9:00 - 22:00</span></h6>
+                    <h6>Friday<span>9:00 - 22:00</span></h6>
+                    <h6>Saturday<span>9:00 - 22:00</span></h6>
+                    <h6>Sunday<span>9:00 - 22:00</span></h6>
+                 
+                </div>
+            </div>
+    
+            <div class="center box">
+                <h5>Address</h5>
+                <div class="content">
+                    <div class="social">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Setapak , Kuala Lumpur</span>
+                    </div>
+    
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+604-240 3601</span>
+                    </div>
+    
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">info@lovealoaf.com</span>
+                    </div>
+                    <div class="map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.5366322029954!2d101.72334369678956!3d3.215557299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2sTunku%20Abdul%20Rahman%20University%20of%20Management%20and%20Technology%20(TAR%20UMT)!5e0!3m2!1sen!2smy!4v1683354247804!5m2!1sen!2smy" 
+                            width="600" height="450" style="border:0;" allowfullscreen="" 
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="right box">
+                <h5>Contact Us</h5>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message</div>
+                            <textarea cols="25" rows="2" required></textarea>
+                        </div>
+                        <div class="btn"></div>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    
+    </footer>
+    
+    
+
+</html>
